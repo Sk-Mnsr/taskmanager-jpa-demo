@@ -12,7 +12,9 @@ import java.time.LocalDate;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@NamedQuery(name = "toto", query = "SELECT t FROM Task t WHERE t.isCompleted = :completed")
 public class Task {
+
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
